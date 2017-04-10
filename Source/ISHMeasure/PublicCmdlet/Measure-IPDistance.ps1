@@ -50,8 +50,12 @@ End
 		{
 			$ServerIp = (Test-Connection -ComputerName $ServerHost -Count 1).IPV4Address.IPAddressToString
 		}
-		else
-		{
+        elseif ($null -ne (Resolve-DnsName -Name $ServerHost))
+        {
+            $ServerIp = ((Resolve-DnsName -Name $ServerHost).IpAddress -match "\b(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}\b")[0]
+        }
+        else
+        {
 			Write-Verbose ("MyCommand[" + $MyInvocation.MyCommand + "] Resolving ServerHost[" + $ServerHost + "] failed")
 			Write-Output -1
 			Return
