@@ -1,6 +1,6 @@
 # Summary
 
-`ISHMeasure` is a PowerShell module on SDL Knowledge Center Content Manager. Its goal is basic benchmarking tests on top of the Component Content Management System (InfoShare). This library is constructed close to the "Web Services API" relying on the [ISHRemote](https://github.com/sdl/ISHRemote) module.
+`ISHMeasure` is a PowerShell module on SDL Tridion Docs Content Manager (Knowledge Center Content Manager, LiveContent Architect, Trisoft InfoShare). Its goal is basic benchmarking tests on top of the Component Content Management System. This library is constructed close to the "Web Services API" relying on the [ISHRemote](https://github.com/sdl/ISHRemote) module.
 
 # Features & Samples
 
@@ -13,7 +13,7 @@
 ## Prerequisites
 
 When you have PowerShell 5 on your client machine, the PSVersion entry in `$PSVersionTable` reads 5.0... and PackageManagement is there implicitly.
-When you have a PowerShell version lower than 5 on your client machine, the PSVersion entry in `$PSVersionTable` reads 4.0 or even 3.0. Note that the latest Knowledge Center 2016SP3/12.0.3 release is only verified with PowerShell 4 (not 5 or above), so don't upgrade your servers. As ISHMeasure is about a client-side web services driven library I actually don't expect you to even install it on a server.
+When you have a PowerShell version lower than 5 on your client machine, the PSVersion entry in `$PSVersionTable` reads 4.0 or even 3.0. Note that up to Knowledge Center 2016SP3/12.0.3 release is only verified with PowerShell 4 (not 5 or above), so don't upgrade your servers. As ISHMeasure is about a client-side web services driven library I actually don't expect you to even install it on a server.
 
 So either upgrade to [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) or stay on PowerShell 4 and install [Package Management Preview – March 2016 for PowerShell 4 & 3](https://blogs.msdn.microsoft.com/powershell/2016/03/08/package-management-preview-march-2016-for-powershell-4-3-is-now-available/).
 
